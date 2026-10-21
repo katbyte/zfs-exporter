@@ -1,0 +1,287 @@
+# HELP zfs_command_stuck Whether a ZFS program that ran past its time limit has still not ended when killed (1) or not (0): ZFS itself is likely stuck on a pool, and nothing more is asked until it ends.
+# TYPE zfs_command_stuck gauge
+zfs_command_stuck{command="zpool"} 0
+zfs_command_stuck{command="zpool_influxdb"} 0
+# HELP zfs_command_timeouts_total How many times a ZFS program ran past its time limit and was stopped.
+# TYPE zfs_command_timeouts_total counter
+zfs_command_timeouts_total{command="zpool"} 0
+zfs_command_timeouts_total{command="zpool_influxdb"} 1
+# HELP zfs_disk_errors_total How many requests to the disk went wrong, as zpool status counts them. By error: read, write or checksum, the last a block that read back other than it was written. Since the pool was imported or its counts cleared.
+# TYPE zfs_disk_errors_total counter
+zfs_disk_errors_total{class="cache",disk="nvme0n1",error="checksum",pool="tank",serial="S0000001",vdev="nvme0n1p1"} 0
+zfs_disk_errors_total{class="cache",disk="nvme0n1",error="read",pool="tank",serial="S0000001",vdev="nvme0n1p1"} 0
+zfs_disk_errors_total{class="cache",disk="nvme0n1",error="write",pool="tank",serial="S0000001",vdev="nvme0n1p1"} 0
+zfs_disk_errors_total{class="data",disk="103",error="checksum",pool="tank",serial="",vdev="raidz2-0"} 0
+zfs_disk_errors_total{class="data",disk="103",error="read",pool="tank",serial="",vdev="raidz2-0"} 0
+zfs_disk_errors_total{class="data",disk="103",error="write",pool="tank",serial="",vdev="raidz2-0"} 0
+zfs_disk_errors_total{class="data",disk="sdb",error="checksum",pool="tank",serial="Z0000001",vdev="raidz2-0"} 0
+zfs_disk_errors_total{class="data",disk="sdb",error="read",pool="tank",serial="Z0000001",vdev="raidz2-0"} 0
+zfs_disk_errors_total{class="data",disk="sdb",error="write",pool="tank",serial="Z0000001",vdev="raidz2-0"} 0
+zfs_disk_errors_total{class="data",disk="sdc",error="checksum",pool="tank",serial="Z0000002",vdev="raidz2-0"} 2
+zfs_disk_errors_total{class="data",disk="sdc",error="read",pool="tank",serial="Z0000002",vdev="raidz2-0"} 0
+zfs_disk_errors_total{class="data",disk="sdc",error="write",pool="tank",serial="Z0000002",vdev="raidz2-0"} 0
+# HELP zfs_disk_info Always 1, with what each disk in a pool is and where: ZFS's GUID for it and the path it has for it, the disk's model and world wide name, and the enclosure and slot it sits in as sas-exporter names them. The disk label is the kernel's name for the disk today, or ZFS's GUID for a disk it cannot find; the serial label is the one thing that never changes.
+# TYPE zfs_disk_info gauge
+zfs_disk_info{class="cache",disk="nvme0n1",enclosure="",guid="104",model="SAMSUNG MZQL27T6HBLA-00A07",path="/dev/nvme0n1p1",pool="tank",serial="S0000001",slot="",vdev="nvme0n1p1",wwn=""} 1
+zfs_disk_info{class="data",disk="103",enclosure="",guid="103",model="",path="/dev/disk/by-partuuid/33333333-3333-3333-3333-333333333333",pool="tank",serial="",slot="",vdev="raidz2-0",wwn=""} 1
+zfs_disk_info{class="data",disk="sdb",enclosure="1:0:24:0",guid="101",model="WUH722020BL5204",path="/dev/disk/by-partuuid/11111111-1111-1111-1111-111111111111",pool="tank",serial="Z0000001",slot="0",vdev="raidz2-0",wwn="5000cca000000001"} 1
+zfs_disk_info{class="data",disk="sdc",enclosure="1:0:24:0",guid="102",model="WUH722020BL5204",path="/dev/disk/by-partuuid/22222222-2222-2222-2222-222222222222",pool="tank",serial="Z0000002",slot="1",vdev="raidz2-0",wwn="5000cca000000002"} 1
+zfs_disk_info{class="spare",disk="sdd",enclosure="1:0:24:0",guid="105",model="WUH722020BL5204",path="/dev/disk/by-partuuid/44444444-4444-4444-4444-444444444444",pool="tank",serial="Z0000004",slot="3",vdev="sdd1",wwn="5000cca000000004"} 1
+# HELP zfs_disk_latency_seconds How long each request to the disk took, as a histogram, since the pool was imported: compare a disk with the others in its vdev, since a stripe waits for its slowest disk. Only the time at the disk itself, wait disk, unless every disk timing is asked for. By wait: total from being asked to being answered, disk at the disk itself, and sync_queue, async_queue, scrub_queue, trim_queue and rebuild_queue in each of ZFS's queues before being sent to a disk; and by op, read or write. ZFS counts in powers of two, so each bucket ends at the most it holds, 2047ns for the one from 1024ns. ZFS keeps no total, so the sum is worked out the way zpool iostat -l works out its averages: each request counted at the middle of its bucket.
+# TYPE zfs_disk_latency_seconds histogram
+zfs_disk_latency_seconds_bucket{class="data",disk="103",op="read",pool="tank",serial="",vdev="raidz2-0",wait="disk",le="2.047e-06"} 0
+zfs_disk_latency_seconds_bucket{class="data",disk="103",op="read",pool="tank",serial="",vdev="raidz2-0",wait="disk",le="4.095e-06"} 0
+zfs_disk_latency_seconds_bucket{class="data",disk="103",op="read",pool="tank",serial="",vdev="raidz2-0",wait="disk",le="+Inf"} 0
+zfs_disk_latency_seconds_sum{class="data",disk="103",op="read",pool="tank",serial="",vdev="raidz2-0",wait="disk"} 0
+zfs_disk_latency_seconds_count{class="data",disk="103",op="read",pool="tank",serial="",vdev="raidz2-0",wait="disk"} 0
+zfs_disk_latency_seconds_bucket{class="data",disk="103",op="write",pool="tank",serial="",vdev="raidz2-0",wait="disk",le="2.047e-06"} 1
+zfs_disk_latency_seconds_bucket{class="data",disk="103",op="write",pool="tank",serial="",vdev="raidz2-0",wait="disk",le="4.095e-06"} 2
+zfs_disk_latency_seconds_bucket{class="data",disk="103",op="write",pool="tank",serial="",vdev="raidz2-0",wait="disk",le="+Inf"} 2
+zfs_disk_latency_seconds_sum{class="data",disk="103",op="write",pool="tank",serial="",vdev="raidz2-0",wait="disk"} 6e-09
+zfs_disk_latency_seconds_count{class="data",disk="103",op="write",pool="tank",serial="",vdev="raidz2-0",wait="disk"} 2
+zfs_disk_latency_seconds_bucket{class="data",disk="sdb",op="read",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk",le="2.047e-06"} 6
+zfs_disk_latency_seconds_bucket{class="data",disk="sdb",op="read",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk",le="4.095e-06"} 13
+zfs_disk_latency_seconds_bucket{class="data",disk="sdb",op="read",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk",le="+Inf"} 15
+zfs_disk_latency_seconds_sum{class="data",disk="sdb",op="read",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk"} 4.5e-08
+zfs_disk_latency_seconds_count{class="data",disk="sdb",op="read",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk"} 15
+zfs_disk_latency_seconds_bucket{class="data",disk="sdb",op="write",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk",le="2.047e-06"} 1
+zfs_disk_latency_seconds_bucket{class="data",disk="sdb",op="write",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk",le="4.095e-06"} 2
+zfs_disk_latency_seconds_bucket{class="data",disk="sdb",op="write",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk",le="+Inf"} 2
+zfs_disk_latency_seconds_sum{class="data",disk="sdb",op="write",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk"} 6e-09
+zfs_disk_latency_seconds_count{class="data",disk="sdb",op="write",pool="tank",serial="Z0000001",vdev="raidz2-0",wait="disk"} 2
+zfs_disk_latency_seconds_bucket{class="data",disk="sdc",op="read",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk",le="2.047e-06"} 6
+zfs_disk_latency_seconds_bucket{class="data",disk="sdc",op="read",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk",le="4.095e-06"} 13
+zfs_disk_latency_seconds_bucket{class="data",disk="sdc",op="read",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk",le="+Inf"} 15
+zfs_disk_latency_seconds_sum{class="data",disk="sdc",op="read",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk"} 4.5e-08
+zfs_disk_latency_seconds_count{class="data",disk="sdc",op="read",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk"} 15
+zfs_disk_latency_seconds_bucket{class="data",disk="sdc",op="write",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk",le="2.047e-06"} 1
+zfs_disk_latency_seconds_bucket{class="data",disk="sdc",op="write",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk",le="4.095e-06"} 2
+zfs_disk_latency_seconds_bucket{class="data",disk="sdc",op="write",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk",le="+Inf"} 2
+zfs_disk_latency_seconds_sum{class="data",disk="sdc",op="write",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk"} 6e-09
+zfs_disk_latency_seconds_count{class="data",disk="sdc",op="write",pool="tank",serial="Z0000002",vdev="raidz2-0",wait="disk"} 2
+# HELP zfs_disk_slow_ios_total How many requests the disk took longer than zfs_slow_io_threshold_seconds to answer, since the pool was imported or its counts were cleared. A disk going bad is often slow before it gives errors.
+# TYPE zfs_disk_slow_ios_total counter
+zfs_disk_slow_ios_total{class="cache",disk="nvme0n1",pool="tank",serial="S0000001",vdev="nvme0n1p1"} 0
+zfs_disk_slow_ios_total{class="data",disk="103",pool="tank",serial="",vdev="raidz2-0"} 0
+zfs_disk_slow_ios_total{class="data",disk="sdb",pool="tank",serial="Z0000001",vdev="raidz2-0"} 0
+zfs_disk_slow_ios_total{class="data",disk="sdc",pool="tank",serial="Z0000002",vdev="raidz2-0"} 4
+# HELP zfs_disk_state The disk's health, as zpool status gives it. Each state is a reading of its own, 1 for the one it is in and 0 for the rest: ONLINE, DEGRADED, FAULTED, OFFLINE, REMOVED or UNAVAIL, and for a spare AVAIL or INUSE.
+# TYPE zfs_disk_state gauge
+zfs_disk_state{class="cache",disk="nvme0n1",pool="tank",serial="S0000001",state="DEGRADED",vdev="nvme0n1p1"} 0
+zfs_disk_state{class="cache",disk="nvme0n1",pool="tank",serial="S0000001",state="FAULTED",vdev="nvme0n1p1"} 0
+zfs_disk_state{class="cache",disk="nvme0n1",pool="tank",serial="S0000001",state="OFFLINE",vdev="nvme0n1p1"} 0
+zfs_disk_state{class="cache",disk="nvme0n1",pool="tank",serial="S0000001",state="ONLINE",vdev="nvme0n1p1"} 1
+zfs_disk_state{class="cache",disk="nvme0n1",pool="tank",serial="S0000001",state="REMOVED",vdev="nvme0n1p1"} 0
+zfs_disk_state{class="cache",disk="nvme0n1",pool="tank",serial="S0000001",state="UNAVAIL",vdev="nvme0n1p1"} 0
+zfs_disk_state{class="data",disk="103",pool="tank",serial="",state="DEGRADED",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="103",pool="tank",serial="",state="FAULTED",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="103",pool="tank",serial="",state="OFFLINE",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="103",pool="tank",serial="",state="ONLINE",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="103",pool="tank",serial="",state="REMOVED",vdev="raidz2-0"} 1
+zfs_disk_state{class="data",disk="103",pool="tank",serial="",state="UNAVAIL",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdb",pool="tank",serial="Z0000001",state="DEGRADED",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdb",pool="tank",serial="Z0000001",state="FAULTED",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdb",pool="tank",serial="Z0000001",state="OFFLINE",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdb",pool="tank",serial="Z0000001",state="ONLINE",vdev="raidz2-0"} 1
+zfs_disk_state{class="data",disk="sdb",pool="tank",serial="Z0000001",state="REMOVED",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdb",pool="tank",serial="Z0000001",state="UNAVAIL",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdc",pool="tank",serial="Z0000002",state="DEGRADED",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdc",pool="tank",serial="Z0000002",state="FAULTED",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdc",pool="tank",serial="Z0000002",state="OFFLINE",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdc",pool="tank",serial="Z0000002",state="ONLINE",vdev="raidz2-0"} 1
+zfs_disk_state{class="data",disk="sdc",pool="tank",serial="Z0000002",state="REMOVED",vdev="raidz2-0"} 0
+zfs_disk_state{class="data",disk="sdc",pool="tank",serial="Z0000002",state="UNAVAIL",vdev="raidz2-0"} 0
+zfs_disk_state{class="spare",disk="sdd",pool="tank",serial="Z0000004",state="AVAIL",vdev="sdd1"} 1
+zfs_disk_state{class="spare",disk="sdd",pool="tank",serial="Z0000004",state="INUSE",vdev="sdd1"} 0
+# HELP zfs_poll_duration_seconds How long the last round of each schedule took.
+# TYPE zfs_poll_duration_seconds gauge
+zfs_poll_duration_seconds{poll="stats"} 0.6
+zfs_poll_duration_seconds{poll="status"} 0.8
+# HELP zfs_poll_failures_total How many rounds of each schedule have failed since the tool started.
+# TYPE zfs_poll_failures_total counter
+zfs_poll_failures_total{poll="stats"} 1
+zfs_poll_failures_total{poll="status"} 0
+# HELP zfs_poll_interval_seconds How often each schedule is asked.
+# TYPE zfs_poll_interval_seconds gauge
+zfs_poll_interval_seconds{poll="stats"} 60
+zfs_poll_interval_seconds{poll="status"} 60
+# HELP zfs_poll_last_success_timestamp_seconds When each schedule was last answered in full, in seconds since 1970.
+# TYPE zfs_poll_last_success_timestamp_seconds gauge
+zfs_poll_last_success_timestamp_seconds{poll="stats"} 9.466848e+08
+zfs_poll_last_success_timestamp_seconds{poll="status"} 9.466848e+08
+# HELP zfs_pool_active_requests How many requests the pool had with its disks when it was last asked, by queue and op: a glimpse once a stats interval, so it shows a pool that stays busy and not a burst.
+# TYPE zfs_pool_active_requests gauge
+zfs_pool_active_requests{op="read",pool="tank",queue="scrub"} 0
+zfs_pool_active_requests{op="read",pool="tank",queue="sync"} 1
+# HELP zfs_pool_allocated_bytes How much of the pool is used, raidz parity counted, as zpool list shows it: zfs_pool_size_bytes less this is what is free.
+# TYPE zfs_pool_allocated_bytes gauge
+zfs_pool_allocated_bytes{pool="tank"} 2.4e+13
+# HELP zfs_pool_bytes_total How many bytes the pool has read and written since it was imported, by op.
+# TYPE zfs_pool_bytes_total counter
+zfs_pool_bytes_total{op="read",pool="tank"} 122880
+zfs_pool_bytes_total{op="write",pool="tank"} 24576
+# HELP zfs_pool_data_errors How many places in the pool hold data ZFS could not repair, as zpool status -v lists them: anything but 0 is damaged files.
+# TYPE zfs_pool_data_errors gauge
+zfs_pool_data_errors{pool="tank"} 0
+# HELP zfs_pool_errors_total How many requests to the pool as a whole went wrong, as zpool status counts them on the pool's own line. By error: read, write or checksum, the last a block that read back other than it was written. Since the pool was imported or its counts cleared.
+# TYPE zfs_pool_errors_total counter
+zfs_pool_errors_total{error="checksum",pool="tank"} 0
+zfs_pool_errors_total{error="read",pool="tank"} 0
+zfs_pool_errors_total{error="write",pool="tank"} 0
+# HELP zfs_pool_latency_seconds How long each request to the pool took, as a histogram, since the pool was imported. By wait: total from being asked to being answered, disk at the disk itself, and sync_queue, async_queue, scrub_queue, trim_queue and rebuild_queue in each of ZFS's queues before being sent to a disk; and by op, read or write. ZFS counts in powers of two, so each bucket ends at the most it holds, 2047ns for the one from 1024ns. ZFS keeps no total, so the sum is worked out the way zpool iostat -l works out its averages: each request counted at the middle of its bucket.
+# TYPE zfs_pool_latency_seconds histogram
+zfs_pool_latency_seconds_bucket{op="read",pool="tank",wait="disk",le="2.047e-06"} 12
+zfs_pool_latency_seconds_bucket{op="read",pool="tank",wait="disk",le="4.095e-06"} 26
+zfs_pool_latency_seconds_bucket{op="read",pool="tank",wait="disk",le="+Inf"} 30
+zfs_pool_latency_seconds_sum{op="read",pool="tank",wait="disk"} 9e-08
+zfs_pool_latency_seconds_count{op="read",pool="tank",wait="disk"} 30
+zfs_pool_latency_seconds_bucket{op="read",pool="tank",wait="total",le="2.047e-06"} 10
+zfs_pool_latency_seconds_bucket{op="read",pool="tank",wait="total",le="4.095e-06"} 25
+zfs_pool_latency_seconds_bucket{op="read",pool="tank",wait="total",le="+Inf"} 30
+zfs_pool_latency_seconds_sum{op="read",pool="tank",wait="total"} 9e-08
+zfs_pool_latency_seconds_count{op="read",pool="tank",wait="total"} 30
+zfs_pool_latency_seconds_bucket{op="write",pool="tank",wait="disk",le="2.047e-06"} 1
+zfs_pool_latency_seconds_bucket{op="write",pool="tank",wait="disk",le="4.095e-06"} 2
+zfs_pool_latency_seconds_bucket{op="write",pool="tank",wait="disk",le="+Inf"} 2
+zfs_pool_latency_seconds_sum{op="write",pool="tank",wait="disk"} 6e-09
+zfs_pool_latency_seconds_count{op="write",pool="tank",wait="disk"} 2
+# HELP zfs_pool_operations_total How many reads and writes the pool has done since it was imported, by op.
+# TYPE zfs_pool_operations_total counter
+zfs_pool_operations_total{op="read",pool="tank"} 30
+zfs_pool_operations_total{op="write",pool="tank"} 6
+# HELP zfs_pool_pending_requests How many requests the pool had waiting their turn for its disks when it was last asked, by queue and op: a glimpse once a stats interval.
+# TYPE zfs_pool_pending_requests gauge
+zfs_pool_pending_requests{op="read",pool="tank",queue="scrub"} 0
+zfs_pool_pending_requests{op="read",pool="tank",queue="sync"} 2
+# HELP zfs_pool_request_size_bytes How big each request to the pool was, as a histogram, since the pool was imported. By queue, sync, async, scrub, trim or rebuild; op, read or write; and aggregated, true for requests ZFS made by joining smaller ones next to each other. ZFS counts in powers of two, so each bucket ends at the most it holds, 8191 bytes for the one from 4096. ZFS keeps no total, so the sum counts each request at the bottom of its bucket, since nearly every request is a power of two in size: zfs_*_bytes_total over zfs_*_operations_total is the exact average.
+# TYPE zfs_pool_request_size_bytes histogram
+zfs_pool_request_size_bytes_bucket{aggregated="false",op="read",pool="tank",queue="sync",le="1023"} 0
+zfs_pool_request_size_bytes_bucket{aggregated="false",op="read",pool="tank",queue="sync",le="8191"} 30
+zfs_pool_request_size_bytes_bucket{aggregated="false",op="read",pool="tank",queue="sync",le="+Inf"} 30
+zfs_pool_request_size_bytes_sum{aggregated="false",op="read",pool="tank",queue="sync"} 122880
+zfs_pool_request_size_bytes_count{aggregated="false",op="read",pool="tank",queue="sync"} 30
+zfs_pool_request_size_bytes_bucket{aggregated="true",op="write",pool="tank",queue="async",le="1023"} 0
+zfs_pool_request_size_bytes_bucket{aggregated="true",op="write",pool="tank",queue="async",le="8191"} 0
+zfs_pool_request_size_bytes_bucket{aggregated="true",op="write",pool="tank",queue="async",le="+Inf"} 6
+zfs_pool_request_size_bytes_sum{aggregated="true",op="write",pool="tank",queue="async"} 24576
+zfs_pool_request_size_bytes_count{aggregated="true",op="write",pool="tank",queue="async"} 6
+# HELP zfs_pool_scrub_done_ratio How far along the pool's scrub is, from 0 to 1, as zpool status works out its percent done: what it has read of what it has to. Only while it runs.
+# TYPE zfs_pool_scrub_done_ratio gauge
+zfs_pool_scrub_done_ratio{pool="tank"} 0.5
+# HELP zfs_pool_scrub_errors How many errors the pool's last scrub came across.
+# TYPE zfs_pool_scrub_errors gauge
+zfs_pool_scrub_errors{pool="tank"} 1
+# HELP zfs_pool_scrub_examined_bytes How much the pool's last scrub has looked through so far.
+# TYPE zfs_pool_scrub_examined_bytes gauge
+zfs_pool_scrub_examined_bytes{pool="tank"} 6e+11
+# HELP zfs_pool_scrub_issued_bytes How much the pool's last scrub has read from the disks so far: it is done with a part once that part is read.
+# TYPE zfs_pool_scrub_issued_bytes gauge
+zfs_pool_scrub_issued_bytes{pool="tank"} 4.5e+11
+# HELP zfs_pool_scrub_rate_bytes_per_second How fast the pool's scrub is reading, as zpool status works it out: what it has read since it was started, resumed or the pool imported, over how long it has run since. Only while it runs and is not paused.
+# TYPE zfs_pool_scrub_rate_bytes_per_second gauge
+zfs_pool_scrub_rate_bytes_per_second{pool="tank"} 1e+08
+# HELP zfs_pool_scrub_remaining_seconds How long the pool's scrub has left at its rate, as zpool status estimates it: only once it is under way at 10MiB a second or more.
+# TYPE zfs_pool_scrub_remaining_seconds gauge
+zfs_pool_scrub_remaining_seconds{pool="tank"} 4500
+# HELP zfs_pool_scrub_repaired_bytes How much the pool's last scrub has repaired.
+# TYPE zfs_pool_scrub_repaired_bytes gauge
+zfs_pool_scrub_repaired_bytes{pool="tank"} 4096
+# HELP zfs_pool_scrub_skipped_bytes How much the pool's last scrub found it did not need to read.
+# TYPE zfs_pool_scrub_skipped_bytes gauge
+zfs_pool_scrub_skipped_bytes{pool="tank"} 1e+11
+# HELP zfs_pool_scrub_start_timestamp_seconds When the pool's last scrub started.
+# TYPE zfs_pool_scrub_start_timestamp_seconds gauge
+zfs_pool_scrub_start_timestamp_seconds{pool="tank"} 9.466776e+08
+# HELP zfs_pool_scrub_state Whether the pool's last scrub is running or not. Each state is a reading of its own, 1 for the one it is in and 0 for the rest: SCANNING, PAUSED, FINISHED or CANCELED. ZFS keeps only a pool's last scrub or resilver, so a pool shows one or the other.
+# TYPE zfs_pool_scrub_state gauge
+zfs_pool_scrub_state{pool="tank",state="CANCELED"} 0
+zfs_pool_scrub_state{pool="tank",state="FINISHED"} 0
+zfs_pool_scrub_state{pool="tank",state="PAUSED"} 0
+zfs_pool_scrub_state{pool="tank",state="SCANNING"} 1
+# HELP zfs_pool_scrub_to_examine_bytes How much the pool's last scrub has to look through in all.
+# TYPE zfs_pool_scrub_to_examine_bytes gauge
+zfs_pool_scrub_to_examine_bytes{pool="tank"} 1e+12
+# HELP zfs_pool_size_bytes How big the pool is, raidz parity counted, as zpool list shows it.
+# TYPE zfs_pool_size_bytes gauge
+zfs_pool_size_bytes{pool="tank"} 6e+13
+# HELP zfs_pool_state The pool's health, as zpool status gives it. Each state is a reading of its own, 1 for the one it is in and 0 for the rest: ONLINE, DEGRADED, FAULTED, OFFLINE, REMOVED, UNAVAIL, or SUSPENDED for a pool that has stopped reading and writing until its disks come back.
+# TYPE zfs_pool_state gauge
+zfs_pool_state{pool="tank",state="DEGRADED"} 1
+zfs_pool_state{pool="tank",state="FAULTED"} 0
+zfs_pool_state{pool="tank",state="OFFLINE"} 0
+zfs_pool_state{pool="tank",state="ONLINE"} 0
+zfs_pool_state{pool="tank",state="REMOVED"} 0
+zfs_pool_state{pool="tank",state="SUSPENDED"} 0
+zfs_pool_state{pool="tank",state="UNAVAIL"} 0
+# HELP zfs_pool_usable_bytes How big the pool is with raidz parity taken out: about what its files can fill, less what ZFS keeps back for itself.
+# TYPE zfs_pool_usable_bytes gauge
+zfs_pool_usable_bytes{pool="tank"} 2e+13
+# HELP zfs_slow_io_threshold_seconds How long a request takes before ZFS counts it as slow, as zio_slow_io_ms sets it.
+# TYPE zfs_slow_io_threshold_seconds gauge
+zfs_slow_io_threshold_seconds 30
+# HELP zfs_up Whether the last round of asking ZFS about the pools was answered in full (1) or not (0). A pool that has stopped answering, or a program that cannot be run, shows here first.
+# TYPE zfs_up gauge
+zfs_up 1
+# HELP zfs_vdev_allocated_bytes How much of the top-level vdev is used, raidz parity counted, as zpool list -v shows it.
+# TYPE zfs_vdev_allocated_bytes gauge
+zfs_vdev_allocated_bytes{class="cache",pool="tank",vdev="nvme0n1p1"} 1e+12
+zfs_vdev_allocated_bytes{class="data",pool="tank",vdev="raidz2-0"} 2.4e+13
+# HELP zfs_vdev_bytes_total How many bytes the top-level vdev has read and written since the pool was imported, by op.
+# TYPE zfs_vdev_bytes_total counter
+zfs_vdev_bytes_total{class="data",op="read",pool="tank",vdev="raidz2-0"} 122880
+zfs_vdev_bytes_total{class="data",op="write",pool="tank",vdev="raidz2-0"} 24576
+# HELP zfs_vdev_errors_total How many requests to the top-level vdev went wrong, as zpool status counts them on its own line. By error: read, write or checksum, the last a block that read back other than it was written. Since the pool was imported or its counts cleared.
+# TYPE zfs_vdev_errors_total counter
+zfs_vdev_errors_total{class="cache",error="checksum",pool="tank",vdev="nvme0n1p1"} 0
+zfs_vdev_errors_total{class="cache",error="read",pool="tank",vdev="nvme0n1p1"} 0
+zfs_vdev_errors_total{class="cache",error="write",pool="tank",vdev="nvme0n1p1"} 0
+zfs_vdev_errors_total{class="data",error="checksum",pool="tank",vdev="raidz2-0"} 0
+zfs_vdev_errors_total{class="data",error="read",pool="tank",vdev="raidz2-0"} 0
+zfs_vdev_errors_total{class="data",error="write",pool="tank",vdev="raidz2-0"} 0
+# HELP zfs_vdev_fragmentation_ratio How broken up the top-level vdev's free space is, from 0 to 1, as zpool list -v shows FRAG: a vdev whose free space is in small pieces writes more slowly. The pool's FRAG is its vdevs' weighed by their size.
+# TYPE zfs_vdev_fragmentation_ratio gauge
+zfs_vdev_fragmentation_ratio{class="data",pool="tank",vdev="raidz2-0"} 0.15
+# HELP zfs_vdev_latency_seconds How long each request to the top-level vdev took, as a histogram, since the pool was imported. By wait: total from being asked to being answered, disk at the disk itself, and sync_queue, async_queue, scrub_queue, trim_queue and rebuild_queue in each of ZFS's queues before being sent to a disk; and by op, read or write. ZFS counts in powers of two, so each bucket ends at the most it holds, 2047ns for the one from 1024ns. ZFS keeps no total, so the sum is worked out the way zpool iostat -l works out its averages: each request counted at the middle of its bucket.
+# TYPE zfs_vdev_latency_seconds histogram
+zfs_vdev_latency_seconds_bucket{class="data",op="read",pool="tank",vdev="raidz2-0",wait="disk",le="2.047e-06"} 12
+zfs_vdev_latency_seconds_bucket{class="data",op="read",pool="tank",vdev="raidz2-0",wait="disk",le="4.095e-06"} 26
+zfs_vdev_latency_seconds_bucket{class="data",op="read",pool="tank",vdev="raidz2-0",wait="disk",le="+Inf"} 30
+zfs_vdev_latency_seconds_sum{class="data",op="read",pool="tank",vdev="raidz2-0",wait="disk"} 9e-08
+zfs_vdev_latency_seconds_count{class="data",op="read",pool="tank",vdev="raidz2-0",wait="disk"} 30
+zfs_vdev_latency_seconds_bucket{class="data",op="read",pool="tank",vdev="raidz2-0",wait="total",le="2.047e-06"} 10
+zfs_vdev_latency_seconds_bucket{class="data",op="read",pool="tank",vdev="raidz2-0",wait="total",le="4.095e-06"} 25
+zfs_vdev_latency_seconds_bucket{class="data",op="read",pool="tank",vdev="raidz2-0",wait="total",le="+Inf"} 30
+zfs_vdev_latency_seconds_sum{class="data",op="read",pool="tank",vdev="raidz2-0",wait="total"} 9e-08
+zfs_vdev_latency_seconds_count{class="data",op="read",pool="tank",vdev="raidz2-0",wait="total"} 30
+zfs_vdev_latency_seconds_bucket{class="data",op="write",pool="tank",vdev="raidz2-0",wait="disk",le="2.047e-06"} 1
+zfs_vdev_latency_seconds_bucket{class="data",op="write",pool="tank",vdev="raidz2-0",wait="disk",le="4.095e-06"} 2
+zfs_vdev_latency_seconds_bucket{class="data",op="write",pool="tank",vdev="raidz2-0",wait="disk",le="+Inf"} 2
+zfs_vdev_latency_seconds_sum{class="data",op="write",pool="tank",vdev="raidz2-0",wait="disk"} 6e-09
+zfs_vdev_latency_seconds_count{class="data",op="write",pool="tank",vdev="raidz2-0",wait="disk"} 2
+# HELP zfs_vdev_operations_total How many reads and writes the top-level vdev has done since the pool was imported, by op.
+# TYPE zfs_vdev_operations_total counter
+zfs_vdev_operations_total{class="data",op="read",pool="tank",vdev="raidz2-0"} 30
+zfs_vdev_operations_total{class="data",op="write",pool="tank",vdev="raidz2-0"} 6
+# HELP zfs_vdev_size_bytes How big the top-level vdev is, raidz parity counted, as zpool list -v shows it.
+# TYPE zfs_vdev_size_bytes gauge
+zfs_vdev_size_bytes{class="cache",pool="tank",vdev="nvme0n1p1"} 7.6e+12
+zfs_vdev_size_bytes{class="data",pool="tank",vdev="raidz2-0"} 6e+13
+# HELP zfs_vdev_state The top-level vdev's health, as zpool status gives it. Each state is a reading of its own, 1 for the one it is in and 0 for the rest: ONLINE, DEGRADED, FAULTED, OFFLINE, REMOVED or UNAVAIL, and for a spare AVAIL or INUSE.
+# TYPE zfs_vdev_state gauge
+zfs_vdev_state{class="cache",pool="tank",state="DEGRADED",vdev="nvme0n1p1"} 0
+zfs_vdev_state{class="cache",pool="tank",state="FAULTED",vdev="nvme0n1p1"} 0
+zfs_vdev_state{class="cache",pool="tank",state="OFFLINE",vdev="nvme0n1p1"} 0
+zfs_vdev_state{class="cache",pool="tank",state="ONLINE",vdev="nvme0n1p1"} 1
+zfs_vdev_state{class="cache",pool="tank",state="REMOVED",vdev="nvme0n1p1"} 0
+zfs_vdev_state{class="cache",pool="tank",state="UNAVAIL",vdev="nvme0n1p1"} 0
+zfs_vdev_state{class="data",pool="tank",state="DEGRADED",vdev="raidz2-0"} 1
+zfs_vdev_state{class="data",pool="tank",state="FAULTED",vdev="raidz2-0"} 0
+zfs_vdev_state{class="data",pool="tank",state="OFFLINE",vdev="raidz2-0"} 0
+zfs_vdev_state{class="data",pool="tank",state="ONLINE",vdev="raidz2-0"} 0
+zfs_vdev_state{class="data",pool="tank",state="REMOVED",vdev="raidz2-0"} 0
+zfs_vdev_state{class="data",pool="tank",state="UNAVAIL",vdev="raidz2-0"} 0
+zfs_vdev_state{class="spare",pool="tank",state="AVAIL",vdev="sdd1"} 1
+zfs_vdev_state{class="spare",pool="tank",state="INUSE",vdev="sdd1"} 0
+# HELP zfs_vdev_usable_bytes How big the top-level vdev is with raidz parity taken out.
+# TYPE zfs_vdev_usable_bytes gauge
+zfs_vdev_usable_bytes{class="data",pool="tank",vdev="raidz2-0"} 2e+13

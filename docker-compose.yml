@@ -1,0 +1,45 @@
+# Default always-on deployment: runs the released image from ghcr.io on the machine the pools are on,
+# and serves the metrics page for a Prometheus, or a Grafana Alloy, to scrape.
+# To run a local build instead: make docker, then set image: zfs-exporter (or add build: .).
+# The machine's own / is mounted read-only at /host: the program runs the machine's own zpool and
+# zpool_influxdb from there, through the machine's own loader and libraries, so they always match
+# its ZFS, and reads /host/dev and /host/sys to find each disk. /dev/zfs is what every ZFS program
+# asks through; ZFS lets anyone read the pools' state through it, so no privilege is given and the
+# image does not run as root. See docs/container.md, and for mounting less than the whole of /.
+# The image's own healthcheck asks /healthz on the default port; add a healthcheck here if
+# ZFS_EXPORTER_LISTEN names another.
+
+networks:
+  net:
+    name: net
+
+services:
+  zfs-exporter:
+    image: ghcr.io/katbyte/zfs-exporter:latest
+    container_name: zfs-exporter
+    hostname: zfs-exporter
+    restart: always
+    volumes:
+      - /:/host:ro
+    devices:
+      - /dev/zfs:/dev/zfs
+    networks:
+      net:
+    # only the host itself can reach the page: whatever scrapes it runs there. Drop the address
+    # to let the rest of the network in, since the page needs no password
+    ports:
+      - "127.0.0.1:9087:9087"
+    environment:
+      - "TZ=America/Vancouver"
+      - "ZFS_EXPORTER_ROOT=/host"
+      - "ZFS_EXPORTER_LISTEN=:9087"
+      - "ZFS_EXPORTER_LOG=INFO"
+      # - "ZFS_EXPORTER_LABELS=hostname=nas"        # labels for every reading, when whatever scrapes the page does not add its own
+      # - "ZFS_EXPORTER_INTERVALS=status=1m,stats=1m"   # how often zpool status and zpool_influxdb are run
+      # - "ZFS_EXPORTER_TIMEOUT=30s"                # how long each is given before it is stopped
+      # - "ZFS_EXPORTER_METRICS=disks,latency"     # the only parts to ask about: see docs/readings.md
+      # - "ZFS_EXPORTER_SKIP=request-sizes"        # parts to leave out, which are then not asked for: see docs/readings.md
+    logging:
+      options:
+        max-size: 100m
+        max-file: "1"

@@ -1,0 +1,11 @@
+.claude/
+.DS_Store
+.idea/
+dist/
+zfs-exporter
+.tools/bin/
+.tools/venv/
+.tools/npm/
+__pycache__/
+.zfs-exporter
+.coverage/

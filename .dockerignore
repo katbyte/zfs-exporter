@@ -1,0 +1,11 @@
+.git
+.github
+.idea
+.tools/bin
+.tools/venv
+.tools/npm
+.coverage
+dist
+zfs-exporter
+*.md
+docker-compose.yml

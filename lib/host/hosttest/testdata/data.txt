@@ -1,0 +1,935 @@
+# What the machine data says of the disks behind its pools, in the lines .scripts/capture.sh writes: every serial number and world wide name here is
+# made up, and the rest is as it was. It was rebuilt from listings of data's /dev and /sys taken by hand, before capture.sh could be run there, so
+# two things are filled in as the kernel lays them out rather than read: each partition's number, and each slot's number, from the name its
+# enclosure gives it.
+#
+# TrueNAS 25.10 in a virtual machine: the pool boot-pool on a virtual disk (sda) with no serial number, and the pool host on another (sdbh) with
+# one, neither with a world wide name to give; 56 SAS disks in the pool data behind two Broadcom 9500 cards and three enclosures, 2 more as its
+# spares, and 2 NVMe disks as its cache.
+l	dev/disk/by-partuuid/01eaa141-2527-4f41-a278-f604fe10d196	../../sdat1
+b	dev/sdat1
+l	dev/disk/by-partuuid/02ff7c5b-4289-4369-ac88-a0be2bac1cfb	../../sdt1
+b	dev/sdt1
+l	dev/disk/by-partuuid/0998958d-10a3-4f57-8248-9a58991e82cd	../../sdw1
+b	dev/sdw1
+l	dev/disk/by-partuuid/0a82967f-9e42-4f57-b32f-a15abba4787b	../../sdc1
+b	dev/sdc1
+l	dev/disk/by-partuuid/0f43d199-75c0-4f56-b031-67632b4693ad	../../sda4
+b	dev/sda4
+l	dev/disk/by-partuuid/1025c927-a182-4b50-8169-eb64021c0346	../../sdn1
+b	dev/sdn1
+l	dev/disk/by-partuuid/14016eb4-f896-45e3-8031-e6be7e2299c1	../../sdbg1
+b	dev/sdbg1
+l	dev/disk/by-partuuid/19bf3c97-b685-4fa9-8beb-1c973e27f52b	../../sdas1
+b	dev/sdas1
+l	dev/disk/by-partuuid/1a96b75a-8e1d-4f31-8801-b5be2db5d8bb	../../sdax1
+b	dev/sdax1
+l	dev/disk/by-partuuid/1b112f87-17c8-4452-bf3d-4e048d4eeb3b	../../sdau1
+b	dev/sdau1
+l	dev/disk/by-partuuid/1c7dc5c1-19c8-462f-8e93-d32262b4a5e0	../../sdaz1
+b	dev/sdaz1
+l	dev/disk/by-partuuid/1ec6d634-f5ad-486b-a0a2-765cf32af9cf	../../sdf1
+b	dev/sdf1
+l	dev/disk/by-partuuid/1ee105d8-8698-4c0c-81c9-e6e5708e9f5a	../../sdae1
+b	dev/sdae1
+l	dev/disk/by-partuuid/2799c732-43eb-4506-a9a5-4546e18119ad	../../nvme0n1p1
+b	dev/nvme0n1p1
+l	dev/disk/by-partuuid/279cfda6-3892-4f14-842a-7b42f6785401	../../sdu1
+b	dev/sdu1
+l	dev/disk/by-partuuid/2b56dcff-6d1c-4e99-af28-50d4411c5f7b	../../sdah1
+b	dev/sdah1
+l	dev/disk/by-partuuid/2b5df9d2-2d08-46dd-8429-849411efca6d	../../sdbc1
+b	dev/sdbc1
+l	dev/disk/by-partuuid/30882278-6f8a-4e56-802e-eaae98d89566	../../sdak1
+b	dev/sdak1
+l	dev/disk/by-partuuid/331fa9d4-eda1-414f-80ce-bd99bf28ad96	../../sdz1
+b	dev/sdz1
+l	dev/disk/by-partuuid/3b14ac87-b279-4027-b43c-2fe26974e714	../../sds1
+b	dev/sds1
+l	dev/disk/by-partuuid/3ce0e779-a895-4ce8-9978-b08d6b1383fb	../../sdam1
+b	dev/sdam1
+l	dev/disk/by-partuuid/404fbc02-7a25-42b2-b146-fea8d8ff30b1	../../sdbf1
+b	dev/sdbf1
+l	dev/disk/by-partuuid/43a4cefc-b206-4bd3-82f8-d1322ca2ae6d	../../sda2
+b	dev/sda2
+l	dev/disk/by-partuuid/49be3202-ae92-45e5-93a1-87f93b0761b4	../../sdj1
+b	dev/sdj1
+l	dev/disk/by-partuuid/4a591c08-dac9-44c9-8523-c294b3a86af5	../../sdaa1
+b	dev/sdaa1
+l	dev/disk/by-partuuid/5357a53f-686c-4a8a-acbd-300b22705a92	../../sda3
+b	dev/sda3
+l	dev/disk/by-partuuid/59468fdb-cf2e-4cfd-ba42-3d33d43dbbde	../../sdar1
+b	dev/sdar1
+l	dev/disk/by-partuuid/629c412f-9d39-4270-b8d0-e215fe542565	../../sdap1
+b	dev/sdap1
+l	dev/disk/by-partuuid/63777a3a-96d6-447b-b68c-7dd6b4122f5e	../../sdaq1
+b	dev/sdaq1
+l	dev/disk/by-partuuid/6cd1181a-ab9b-49c0-b178-13612ed97153	../../sdai1
+b	dev/sdai1
+l	dev/disk/by-partuuid/761ae75a-3595-4c61-84bd-8c6b6f103c01	../../sdh1
+b	dev/sdh1
+l	dev/disk/by-partuuid/7c424349-9050-492f-99c1-3950d1771af3	../../sdal1
+b	dev/sdal1
+l	dev/disk/by-partuuid/7ccf0065-0f4f-4055-9f6b-3959b5c006b9	../../sdao1
+b	dev/sdao1
+l	dev/disk/by-partuuid/81af67df-9fe1-4186-bd88-eb625924cde5	../../sdm1
+b	dev/sdm1
+l	dev/disk/by-partuuid/8254a44b-6586-4471-b7cf-88b092eb1307	../../sda1
+b	dev/sda1
+l	dev/disk/by-partuuid/87a5005f-0795-4034-b5ec-e1ddce86c846	../../sdo1
+b	dev/sdo1
+l	dev/disk/by-partuuid/968f5d36-7009-4bc7-82d7-5a80ede7fe6a	../../sdr1
+b	dev/sdr1
+l	dev/disk/by-partuuid/97c664cf-921f-40b8-b859-e1fb4f3a953d	../../sdaf1
+b	dev/sdaf1
+l	dev/disk/by-partuuid/992aaac1-448b-42c9-ae01-876f0119d1e9	../../sdab1
+b	dev/sdab1
+l	dev/disk/by-partuuid/9dfed822-3651-4b15-8648-6506450e7301	../../nvme1n1p1
+b	dev/nvme1n1p1
+l	dev/disk/by-partuuid/a082cb49-8a4e-4bec-96c5-d7c5bd31dd17	../../sday1
+b	dev/sday1
+l	dev/disk/by-partuuid/a18ddc95-eafb-49c0-9f38-6cec47d40bb3	../../sdi1
+b	dev/sdi1
+l	dev/disk/by-partuuid/a764fff4-9698-4ad9-9bc6-c5f7364029e1	../../sdv1
+b	dev/sdv1
+l	dev/disk/by-partuuid/ac57b04f-159c-4054-9682-f82bf46094d6	../../sdbh1
+b	dev/sdbh1
+l	dev/disk/by-partuuid/b09d9a77-7a6f-4092-aa5b-dffe86c87290	../../sdbb1
+b	dev/sdbb1
+l	dev/disk/by-partuuid/b37f00e2-20d0-43db-8175-3df5f8837c04	../../sdp1
+b	dev/sdp1
+l	dev/disk/by-partuuid/b4f7bf69-7688-4abc-af93-d0ac55f4c0a4	../../sdg1
+b	dev/sdg1
+l	dev/disk/by-partuuid/b6c070ef-d861-413c-9d46-3b1277fecf8c	../../sdac1
+b	dev/sdac1
+l	dev/disk/by-partuuid/ba0d0830-520c-45cd-ab09-9cf5cec3bc56	../../sdav1
+b	dev/sdav1
+l	dev/disk/by-partuuid/be05db81-0ad0-4a83-a8f1-6998b3a3a6e1	../../sdbe1
+b	dev/sdbe1
+l	dev/disk/by-partuuid/c1596aa6-56f3-4e55-871d-7dd0f8af73a9	../../sdy1
+b	dev/sdy1
+l	dev/disk/by-partuuid/c2937356-1fe4-445e-af9c-eed3b9028231	../../sdba1
+b	dev/sdba1
+l	dev/disk/by-partuuid/ca18544c-7d58-497c-abd1-97e5b738f0fe	../../sdd1
+b	dev/sdd1
+l	dev/disk/by-partuuid/ce0b42a5-6898-4a1e-b760-f8c55eb6a5af	../../sdx1
+b	dev/sdx1
+l	dev/disk/by-partuuid/deb92822-daab-425f-b246-e836421d32f4	../../sde1
+b	dev/sde1
+l	dev/disk/by-partuuid/e0c69ad3-9dc6-4668-93dd-b86feaeba3e7	../../sdq1
+b	dev/sdq1
+l	dev/disk/by-partuuid/e2e5bc7b-20db-4766-8181-0b5481e7bad6	../../sdb1
+b	dev/sdb1
+l	dev/disk/by-partuuid/e5b9136f-7af3-4d8f-af83-fa97451ffdfb	../../sdk1
+b	dev/sdk1
+l	dev/disk/by-partuuid/e9b3fae7-b979-4764-bbf7-cc5aef151f29	../../sdaw1
+b	dev/sdaw1
+l	dev/disk/by-partuuid/ef479c3e-c543-4e38-aa1e-f2faf08f45c5	../../sdl1
+b	dev/sdl1
+l	dev/disk/by-partuuid/f074d3e8-a351-4cb5-8ed0-4656d38311ee	../../sdan1
+b	dev/sdan1
+l	dev/disk/by-partuuid/f0b6a847-6e48-47f1-ab0a-835e88f8c232	../../sdbd1
+b	dev/sdbd1
+l	dev/disk/by-partuuid/f21dac34-a1aa-4acd-acba-e9fba2c2b837	../../sdad1
+b	dev/sdad1
+l	dev/disk/by-partuuid/f3fbdc0a-f5cc-4fff-a4c8-17a2a7f33c56	../../sdag1
+b	dev/sdag1
+l	dev/disk/by-partuuid/f6dfe4d8-0f4d-43e6-93e0-8a981de309a0	../../sdaj1
+b	dev/sdaj1
+l	sys/block/sda	../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda
+l	sys/class/block/sda	../../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda
+b	dev/sda
+l	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/device	../../../0:0:0:0
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/vendor	QEMU    
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/model	QEMU HARDDISK   
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/rev	2.5+
+!	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/wwid	Invalid argument
+l	sys/class/block/sda1	../../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda1
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda1/partition	1
+l	sys/class/block/sda2	../../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda2
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda2/partition	2
+l	sys/class/block/sda3	../../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda3
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda3/partition	3
+l	sys/class/block/sda4	../../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda4
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda4/partition	4
+l	sys/block/sdaa	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/block/sdaa
+l	sys/class/block/sdaa	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/block/sdaa
+b	dev/sdaa
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/block/sdaa/device	../../../1:0:26:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/wwid	naa.5000cca000000001
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/vpd_pg80	0080001020202020202020205a30303030303031
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/enclosure_device:Slot01	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot01
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot01/slot	1
+l	sys/class/block/sdaa1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/block/sdaa/sdaa1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:1/end_device-1:1:1/target1:0:26/1:0:26:0/block/sdaa/sdaa1/partition	1
+l	sys/block/sdab	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/block/sdab
+l	sys/class/block/sdab	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/block/sdab
+b	dev/sdab
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/block/sdab/device	../../../1:0:27:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/wwid	naa.5000cca000000002
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/vpd_pg80	0080001020202020202020205a30303030303032
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/enclosure_device:Slot02	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot02
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot02/slot	2
+l	sys/class/block/sdab1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/block/sdab/sdab1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:2/end_device-1:1:2/target1:0:27/1:0:27:0/block/sdab/sdab1/partition	1
+l	sys/block/sdac	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/block/sdac
+l	sys/class/block/sdac	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/block/sdac
+b	dev/sdac
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/block/sdac/device	../../../1:0:28:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/wwid	naa.5000cca000000003
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/vpd_pg80	0080001020202020202020205a30303030303033
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/enclosure_device:Slot03	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot03
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot03/slot	3
+l	sys/class/block/sdac1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/block/sdac/sdac1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:3/end_device-1:1:3/target1:0:28/1:0:28:0/block/sdac/sdac1/partition	1
+l	sys/block/sdad	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/block/sdad
+l	sys/class/block/sdad	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/block/sdad
+b	dev/sdad
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/block/sdad/device	../../../1:0:29:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/wwid	naa.5000cca000000004
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/vpd_pg80	0080001020202020202020205a30303030303034
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/enclosure_device:Slot04	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot04
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot04/slot	4
+l	sys/class/block/sdad1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/block/sdad/sdad1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:4/end_device-1:1:4/target1:0:29/1:0:29:0/block/sdad/sdad1/partition	1
+l	sys/block/sdae	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/block/sdae
+l	sys/class/block/sdae	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/block/sdae
+b	dev/sdae
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/block/sdae/device	../../../1:0:30:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/wwid	naa.5000cca000000005
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/vpd_pg80	0080001020202020202020205a30303030303035
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/enclosure_device:Slot05	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot05
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot05/slot	5
+l	sys/class/block/sdae1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/block/sdae/sdae1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:5/end_device-1:1:5/target1:0:30/1:0:30:0/block/sdae/sdae1/partition	1
+l	sys/block/sdaf	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/block/sdaf
+l	sys/class/block/sdaf	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/block/sdaf
+b	dev/sdaf
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/block/sdaf/device	../../../1:0:31:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/wwid	naa.5000cca000000006
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/vpd_pg80	0080001020202020202020205a30303030303036
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/enclosure_device:Slot06	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot06
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot06/slot	6
+l	sys/class/block/sdaf1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/block/sdaf/sdaf1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:6/end_device-1:1:6/target1:0:31/1:0:31:0/block/sdaf/sdaf1/partition	1
+l	sys/block/sdag	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/block/sdag
+l	sys/class/block/sdag	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/block/sdag
+b	dev/sdag
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/block/sdag/device	../../../1:0:32:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/wwid	naa.5000cca000000007
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/vpd_pg80	0080001020202020202020205a30303030303037
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/enclosure_device:Slot07	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot07
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot07/slot	7
+l	sys/class/block/sdag1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/block/sdag/sdag1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:7/end_device-1:1:7/target1:0:32/1:0:32:0/block/sdag/sdag1/partition	1
+l	sys/block/sdah	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/block/sdah
+l	sys/class/block/sdah	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/block/sdah
+b	dev/sdah
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/block/sdah/device	../../../1:0:33:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/wwid	naa.5000cca000000008
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/vpd_pg80	0080001020202020202020205a30303030303038
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/enclosure_device:Slot09	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot09
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot09/slot	9
+l	sys/class/block/sdah1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/block/sdah/sdah1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:8/end_device-1:1:8/target1:0:33/1:0:33:0/block/sdah/sdah1/partition	1
+l	sys/block/sdai	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/block/sdai
+l	sys/class/block/sdai	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/block/sdai
+b	dev/sdai
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/block/sdai/device	../../../1:0:34:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/wwid	naa.5000cca000000009
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/vpd_pg80	0080001020202020202020205a30303030303039
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/enclosure_device:Slot10	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot10
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot10/slot	10
+l	sys/class/block/sdai1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/block/sdai/sdai1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:9/end_device-1:1:9/target1:0:34/1:0:34:0/block/sdai/sdai1/partition	1
+l	sys/block/sdaj	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/block/sdaj
+l	sys/class/block/sdaj	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/block/sdaj
+b	dev/sdaj
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/block/sdaj/device	../../../8:0:0:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/wwid	naa.5000cca00000000a
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/vpd_pg80	0080001020202020202020205a30303030303130
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/enclosure_device:Slot00	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot00
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot00/slot	0
+l	sys/class/block/sdaj1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/block/sdaj/sdaj1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:0/end_device-8:0:0/target8:0:0/8:0:0:0/block/sdaj/sdaj1/partition	1
+l	sys/block/sdak	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/block/sdak
+l	sys/class/block/sdak	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/block/sdak
+b	dev/sdak
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/block/sdak/device	../../../8:0:1:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/wwid	naa.5000cca00000000b
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/vpd_pg80	0080001020202020202020205a30303030303131
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/enclosure_device:Slot01	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot01
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot01/slot	1
+l	sys/class/block/sdak1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/block/sdak/sdak1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:1/end_device-8:0:1/target8:0:1/8:0:1:0/block/sdak/sdak1/partition	1
+l	sys/block/sdal	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/block/sdal
+l	sys/class/block/sdal	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/block/sdal
+b	dev/sdal
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/block/sdal/device	../../../8:0:2:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/wwid	naa.5000cca00000000c
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/vpd_pg80	0080001020202020202020205a30303030303132
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/enclosure_device:Slot02	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot02
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot02/slot	2
+l	sys/class/block/sdal1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/block/sdal/sdal1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:2/end_device-8:0:2/target8:0:2/8:0:2:0/block/sdal/sdal1/partition	1
+l	sys/block/sdam	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/block/sdam
+l	sys/class/block/sdam	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/block/sdam
+b	dev/sdam
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/block/sdam/device	../../../8:0:3:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/wwid	naa.5000cca00000000d
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/vpd_pg80	0080001020202020202020205a30303030303133
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/enclosure_device:Slot03	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot03
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot03/slot	3
+l	sys/class/block/sdam1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/block/sdam/sdam1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:3/end_device-8:0:3/target8:0:3/8:0:3:0/block/sdam/sdam1/partition	1
+l	sys/block/sdan	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/block/sdan
+l	sys/class/block/sdan	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/block/sdan
+b	dev/sdan
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/block/sdan/device	../../../8:0:4:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/wwid	naa.5000cca00000000e
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/vpd_pg80	0080001020202020202020205a30303030303134
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/enclosure_device:Slot04	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot04
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot04/slot	4
+l	sys/class/block/sdan1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/block/sdan/sdan1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:4/end_device-8:0:4/target8:0:4/8:0:4:0/block/sdan/sdan1/partition	1
+l	sys/block/sdao	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/block/sdao
+l	sys/class/block/sdao	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/block/sdao
+b	dev/sdao
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/block/sdao/device	../../../8:0:5:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/wwid	naa.5000cca00000000f
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/vpd_pg80	0080001020202020202020205a30303030303135
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/enclosure_device:Slot05	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot05
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot05/slot	5
+l	sys/class/block/sdao1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/block/sdao/sdao1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:5/end_device-8:0:5/target8:0:5/8:0:5:0/block/sdao/sdao1/partition	1
+l	sys/block/sdap	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/block/sdap
+l	sys/class/block/sdap	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/block/sdap
+b	dev/sdap
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/block/sdap/device	../../../8:0:6:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/wwid	naa.5000cca000000010
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/vpd_pg80	0080001020202020202020205a30303030303136
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/enclosure_device:Slot06	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot06
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot06/slot	6
+l	sys/class/block/sdap1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/block/sdap/sdap1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:6/end_device-8:0:6/target8:0:6/8:0:6:0/block/sdap/sdap1/partition	1
+l	sys/block/sdaq	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/block/sdaq
+l	sys/class/block/sdaq	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/block/sdaq
+b	dev/sdaq
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/block/sdaq/device	../../../8:0:7:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/wwid	naa.5000cca000000011
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/vpd_pg80	0080001020202020202020205a30303030303137
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/enclosure_device:Slot07	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot07
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot07/slot	7
+l	sys/class/block/sdaq1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/block/sdaq/sdaq1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:7/end_device-8:0:7/target8:0:7/8:0:7:0/block/sdaq/sdaq1/partition	1
+l	sys/block/sdar	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/block/sdar
+l	sys/class/block/sdar	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/block/sdar
+b	dev/sdar
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/block/sdar/device	../../../8:0:8:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/wwid	naa.5000cca000000012
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/vpd_pg80	0080001020202020202020205a30303030303138
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/enclosure_device:Slot08	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot08
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot08/slot	8
+l	sys/class/block/sdar1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/block/sdar/sdar1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:8/end_device-8:0:8/target8:0:8/8:0:8:0/block/sdar/sdar1/partition	1
+l	sys/block/sdas	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/block/sdas
+l	sys/class/block/sdas	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/block/sdas
+b	dev/sdas
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/block/sdas/device	../../../8:0:9:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/wwid	naa.5000cca000000013
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/vpd_pg80	0080001020202020202020205a30303030303139
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/enclosure_device:Slot09	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot09
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot09/slot	9
+l	sys/class/block/sdas1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/block/sdas/sdas1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:9/end_device-8:0:9/target8:0:9/8:0:9:0/block/sdas/sdas1/partition	1
+l	sys/block/sdat	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/block/sdat
+l	sys/class/block/sdat	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/block/sdat
+b	dev/sdat
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/block/sdat/device	../../../8:0:10:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/wwid	naa.5000cca000000014
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/vpd_pg80	0080001020202020202020205a30303030303230
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/enclosure_device:Slot10	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot10
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot10/slot	10
+l	sys/class/block/sdat1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/block/sdat/sdat1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:10/end_device-8:0:10/target8:0:10/8:0:10:0/block/sdat/sdat1/partition	1
+l	sys/block/sdau	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/block/sdau
+l	sys/class/block/sdau	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/block/sdau
+b	dev/sdau
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/block/sdau/device	../../../8:0:11:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/wwid	naa.5000cca000000015
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/vpd_pg80	0080001020202020202020205a30303030303231
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/enclosure_device:Slot11	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot11
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot11/slot	11
+l	sys/class/block/sdau1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/block/sdau/sdau1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:11/end_device-8:0:11/target8:0:11/8:0:11:0/block/sdau/sdau1/partition	1
+l	sys/block/sdav	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/block/sdav
+l	sys/class/block/sdav	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/block/sdav
+b	dev/sdav
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/block/sdav/device	../../../8:0:12:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/wwid	naa.5000cca000000016
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/vpd_pg80	0080001020202020202020205a30303030303232
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/enclosure_device:Slot12	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot12
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot12/slot	12
+l	sys/class/block/sdav1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/block/sdav/sdav1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:12/end_device-8:0:12/target8:0:12/8:0:12:0/block/sdav/sdav1/partition	1
+l	sys/block/sdaw	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/block/sdaw
+l	sys/class/block/sdaw	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/block/sdaw
+b	dev/sdaw
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/block/sdaw/device	../../../8:0:13:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/wwid	naa.5000cca000000017
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/vpd_pg80	0080001020202020202020205a30303030303233
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/enclosure_device:Slot13	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot13
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot13/slot	13
+l	sys/class/block/sdaw1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/block/sdaw/sdaw1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:13/end_device-8:0:13/target8:0:13/8:0:13:0/block/sdaw/sdaw1/partition	1
+l	sys/block/sdax	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/block/sdax
+l	sys/class/block/sdax	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/block/sdax
+b	dev/sdax
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/block/sdax/device	../../../8:0:14:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/wwid	naa.5000cca000000018
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/vpd_pg80	0080001020202020202020205a30303030303234
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/enclosure_device:Slot14	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot14
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot14/slot	14
+l	sys/class/block/sdax1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/block/sdax/sdax1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:14/end_device-8:0:14/target8:0:14/8:0:14:0/block/sdax/sdax1/partition	1
+l	sys/block/sday	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/block/sday
+l	sys/class/block/sday	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/block/sday
+b	dev/sday
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/block/sday/device	../../../8:0:15:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/wwid	naa.5000cca000000019
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/vpd_pg80	0080001020202020202020205a30303030303235
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/enclosure_device:Slot15	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot15
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot15/slot	15
+l	sys/class/block/sday1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/block/sday/sday1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:15/end_device-8:0:15/target8:0:15/8:0:15:0/block/sday/sday1/partition	1
+l	sys/block/sdaz	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/block/sdaz
+l	sys/class/block/sdaz	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/block/sdaz
+b	dev/sdaz
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/block/sdaz/device	../../../8:0:16:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/wwid	naa.5000cca00000001a
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/vpd_pg80	0080001020202020202020205a30303030303236
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/enclosure_device:Slot16	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot16
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot16/slot	16
+l	sys/class/block/sdaz1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/block/sdaz/sdaz1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:16/end_device-8:0:16/target8:0:16/8:0:16:0/block/sdaz/sdaz1/partition	1
+l	sys/block/sdb	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/block/sdb
+l	sys/class/block/sdb	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/block/sdb
+b	dev/sdb
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/block/sdb/device	../../../1:0:0:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/wwid	naa.5000cca00000001b
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/vpd_pg80	0080001020202020202020205a30303030303237
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/enclosure_device:Slot00	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot00
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot00/slot	0
+l	sys/class/block/sdb1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/block/sdb/sdb1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:0/end_device-1:0:0/target1:0:0/1:0:0:0/block/sdb/sdb1/partition	1
+l	sys/block/sdba	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/block/sdba
+l	sys/class/block/sdba	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/block/sdba
+b	dev/sdba
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/block/sdba/device	../../../8:0:17:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/wwid	naa.5000cca00000001c
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/vpd_pg80	0080001020202020202020205a30303030303238
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/enclosure_device:Slot17	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot17
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot17/slot	17
+l	sys/class/block/sdba1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/block/sdba/sdba1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:17/end_device-8:0:17/target8:0:17/8:0:17:0/block/sdba/sdba1/partition	1
+l	sys/block/sdbb	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/block/sdbb
+l	sys/class/block/sdbb	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/block/sdbb
+b	dev/sdbb
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/block/sdbb/device	../../../8:0:18:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/wwid	naa.5000cca00000001d
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/vpd_pg80	0080001020202020202020205a30303030303239
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/enclosure_device:Slot18	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot18
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot18/slot	18
+l	sys/class/block/sdbb1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/block/sdbb/sdbb1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:18/end_device-8:0:18/target8:0:18/8:0:18:0/block/sdbb/sdbb1/partition	1
+l	sys/block/sdbc	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/block/sdbc
+l	sys/class/block/sdbc	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/block/sdbc
+b	dev/sdbc
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/block/sdbc/device	../../../8:0:19:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/wwid	naa.5000cca00000001e
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/vpd_pg80	0080001020202020202020205a30303030303330
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/enclosure_device:Slot19	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot19
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot19/slot	19
+l	sys/class/block/sdbc1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/block/sdbc/sdbc1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:19/end_device-8:0:19/target8:0:19/8:0:19:0/block/sdbc/sdbc1/partition	1
+l	sys/block/sdbd	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/block/sdbd
+l	sys/class/block/sdbd	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/block/sdbd
+b	dev/sdbd
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/block/sdbd/device	../../../8:0:20:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/wwid	naa.5000cca00000001f
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/vpd_pg80	0080001020202020202020205a30303030303331
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/enclosure_device:Slot20	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot20
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot20/slot	20
+l	sys/class/block/sdbd1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/block/sdbd/sdbd1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:20/end_device-8:0:20/target8:0:20/8:0:20:0/block/sdbd/sdbd1/partition	1
+l	sys/block/sdbe	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/block/sdbe
+l	sys/class/block/sdbe	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/block/sdbe
+b	dev/sdbe
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/block/sdbe/device	../../../8:0:21:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/wwid	naa.5000cca000000020
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/vpd_pg80	0080001020202020202020205a30303030303332
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/enclosure_device:Slot21	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot21
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot21/slot	21
+l	sys/class/block/sdbe1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/block/sdbe/sdbe1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:21/end_device-8:0:21/target8:0:21/8:0:21:0/block/sdbe/sdbe1/partition	1
+l	sys/block/sdbf	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/block/sdbf
+l	sys/class/block/sdbf	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/block/sdbf
+b	dev/sdbf
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/block/sdbf/device	../../../8:0:22:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/wwid	naa.5000cca000000021
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/vpd_pg80	0080001020202020202020205a30303030303333
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/enclosure_device:Slot22	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot22
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot22/slot	22
+l	sys/class/block/sdbf1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/block/sdbf/sdbf1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:22/end_device-8:0:22/target8:0:22/8:0:22:0/block/sdbf/sdbf1/partition	1
+l	sys/block/sdbg	../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/block/sdbg
+l	sys/class/block/sdbg	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/block/sdbg
+b	dev/sdbg
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/block/sdbg/device	../../../8:0:23:0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/wwid	naa.5000cca000000022
+x	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/vpd_pg80	0080001020202020202020205a30303030303334
+l	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/enclosure_device:Slot23	../../../../port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot23
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:24/end_device-8:0:24/target8:0:24/8:0:24:0/enclosure/8:0:24:0/Slot23/slot	23
+l	sys/class/block/sdbg1	../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/block/sdbg/sdbg1
+f	sys/devices/pci0000:00/0000:00:1c.3/0000:04:00.0/host8/port-8:0/expander-8:0/port-8:0:23/end_device-8:0:23/target8:0:23/8:0:23:0/block/sdbg/sdbg1/partition	1
+l	sys/block/sdbh	../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/block/sdbh
+l	sys/class/block/sdbh	../../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/block/sdbh
+b	dev/sdbh
+l	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/block/sdbh/device	../../../9:0:0:1
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/vendor	QEMU    
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/model	QEMU HARDDISK   
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/rev	2.5+
+!	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/wwid	Invalid argument
+x	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/vpd_pg80	008000045a303335
+l	sys/class/block/sdbh1	../../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/block/sdbh/sdbh1
+f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:02.0/virtio3/host9/target9:0:0/9:0:0:1/block/sdbh/sdbh1/partition	1
+l	sys/block/sdc	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/block/sdc
+l	sys/class/block/sdc	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/block/sdc
+b	dev/sdc
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/block/sdc/device	../../../1:0:1:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/wwid	naa.5000cca000000023
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/vpd_pg80	0080001020202020202020205a30303030303336
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/enclosure_device:Slot01	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot01
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot01/slot	1
+l	sys/class/block/sdc1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/block/sdc/sdc1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:1/end_device-1:0:1/target1:0:1/1:0:1:0/block/sdc/sdc1/partition	1
+l	sys/block/sdd	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/block/sdd
+l	sys/class/block/sdd	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/block/sdd
+b	dev/sdd
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/block/sdd/device	../../../1:0:2:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/wwid	naa.5000cca000000024
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/vpd_pg80	0080001020202020202020205a30303030303337
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/enclosure_device:Slot02	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot02
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot02/slot	2
+l	sys/class/block/sdd1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/block/sdd/sdd1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:2/end_device-1:0:2/target1:0:2/1:0:2:0/block/sdd/sdd1/partition	1
+l	sys/block/sde	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/block/sde
+l	sys/class/block/sde	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/block/sde
+b	dev/sde
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/block/sde/device	../../../1:0:3:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/wwid	naa.5000cca000000025
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/vpd_pg80	0080001020202020202020205a30303030303338
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/enclosure_device:Slot03	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot03
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot03/slot	3
+l	sys/class/block/sde1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/block/sde/sde1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:3/end_device-1:0:3/target1:0:3/1:0:3:0/block/sde/sde1/partition	1
+l	sys/block/sdf	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/block/sdf
+l	sys/class/block/sdf	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/block/sdf
+b	dev/sdf
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/block/sdf/device	../../../1:0:4:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/wwid	naa.5000cca000000026
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/vpd_pg80	0080001020202020202020205a30303030303339
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/enclosure_device:Slot04	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot04
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot04/slot	4
+l	sys/class/block/sdf1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/block/sdf/sdf1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:4/end_device-1:0:4/target1:0:4/1:0:4:0/block/sdf/sdf1/partition	1
+l	sys/block/sdg	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/block/sdg
+l	sys/class/block/sdg	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/block/sdg
+b	dev/sdg
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/block/sdg/device	../../../1:0:5:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/wwid	naa.5000cca000000027
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/vpd_pg80	0080001020202020202020205a30303030303430
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/enclosure_device:Slot05	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot05
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot05/slot	5
+l	sys/class/block/sdg1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/block/sdg/sdg1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:5/end_device-1:0:5/target1:0:5/1:0:5:0/block/sdg/sdg1/partition	1
+l	sys/block/sdh	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/block/sdh
+l	sys/class/block/sdh	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/block/sdh
+b	dev/sdh
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/block/sdh/device	../../../1:0:6:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/wwid	naa.5000cca000000028
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/vpd_pg80	0080001020202020202020205a30303030303431
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/enclosure_device:Slot06	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot06
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot06/slot	6
+l	sys/class/block/sdh1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/block/sdh/sdh1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:6/end_device-1:0:6/target1:0:6/1:0:6:0/block/sdh/sdh1/partition	1
+l	sys/block/sdi	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/block/sdi
+l	sys/class/block/sdi	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/block/sdi
+b	dev/sdi
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/block/sdi/device	../../../1:0:7:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/wwid	naa.5000cca000000029
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/vpd_pg80	0080001020202020202020205a30303030303432
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/enclosure_device:Slot07	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot07
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot07/slot	7
+l	sys/class/block/sdi1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/block/sdi/sdi1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:7/end_device-1:0:7/target1:0:7/1:0:7:0/block/sdi/sdi1/partition	1
+l	sys/block/sdj	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/block/sdj
+l	sys/class/block/sdj	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/block/sdj
+b	dev/sdj
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/block/sdj/device	../../../1:0:8:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/wwid	naa.5000cca00000002a
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/vpd_pg80	0080001020202020202020205a30303030303433
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/enclosure_device:Slot08	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot08
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot08/slot	8
+l	sys/class/block/sdj1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/block/sdj/sdj1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:8/end_device-1:0:8/target1:0:8/1:0:8:0/block/sdj/sdj1/partition	1
+l	sys/block/sdk	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/block/sdk
+l	sys/class/block/sdk	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/block/sdk
+b	dev/sdk
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/block/sdk/device	../../../1:0:9:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/wwid	naa.5000cca00000002b
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/vpd_pg80	0080001020202020202020205a30303030303434
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/enclosure_device:Slot09	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot09
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot09/slot	9
+l	sys/class/block/sdk1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/block/sdk/sdk1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:9/end_device-1:0:9/target1:0:9/1:0:9:0/block/sdk/sdk1/partition	1
+l	sys/block/sdl	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/block/sdl
+l	sys/class/block/sdl	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/block/sdl
+b	dev/sdl
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/block/sdl/device	../../../1:0:10:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/wwid	naa.5000cca00000002c
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/vpd_pg80	0080001020202020202020205a30303030303435
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/enclosure_device:Slot10	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot10
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot10/slot	10
+l	sys/class/block/sdl1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/block/sdl/sdl1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:10/end_device-1:0:10/target1:0:10/1:0:10:0/block/sdl/sdl1/partition	1
+l	sys/block/sdm	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/block/sdm
+l	sys/class/block/sdm	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/block/sdm
+b	dev/sdm
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/block/sdm/device	../../../1:0:11:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/wwid	naa.5000cca00000002d
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/vpd_pg80	0080001020202020202020205a30303030303436
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/enclosure_device:Slot11	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot11
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot11/slot	11
+l	sys/class/block/sdm1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/block/sdm/sdm1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:11/end_device-1:0:11/target1:0:11/1:0:11:0/block/sdm/sdm1/partition	1
+l	sys/block/sdn	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/block/sdn
+l	sys/class/block/sdn	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/block/sdn
+b	dev/sdn
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/block/sdn/device	../../../1:0:12:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/wwid	naa.5000cca00000002e
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/vpd_pg80	0080001020202020202020205a30303030303437
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/enclosure_device:Slot12	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot12
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot12/slot	12
+l	sys/class/block/sdn1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/block/sdn/sdn1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:12/end_device-1:0:12/target1:0:12/1:0:12:0/block/sdn/sdn1/partition	1
+l	sys/block/sdo	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/block/sdo
+l	sys/class/block/sdo	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/block/sdo
+b	dev/sdo
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/block/sdo/device	../../../1:0:13:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/wwid	naa.5000cca00000002f
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/vpd_pg80	0080001020202020202020205a30303030303438
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/enclosure_device:Slot13	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot13
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot13/slot	13
+l	sys/class/block/sdo1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/block/sdo/sdo1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:13/end_device-1:0:13/target1:0:13/1:0:13:0/block/sdo/sdo1/partition	1
+l	sys/block/sdp	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/block/sdp
+l	sys/class/block/sdp	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/block/sdp
+b	dev/sdp
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/block/sdp/device	../../../1:0:14:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/wwid	naa.5000cca000000030
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/vpd_pg80	0080001020202020202020205a30303030303439
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/enclosure_device:Slot14	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot14
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot14/slot	14
+l	sys/class/block/sdp1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/block/sdp/sdp1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:14/end_device-1:0:14/target1:0:14/1:0:14:0/block/sdp/sdp1/partition	1
+l	sys/block/sdq	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/block/sdq
+l	sys/class/block/sdq	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/block/sdq
+b	dev/sdq
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/block/sdq/device	../../../1:0:15:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/wwid	naa.5000cca000000031
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/vpd_pg80	0080001020202020202020205a30303030303530
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/enclosure_device:Slot15	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot15
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot15/slot	15
+l	sys/class/block/sdq1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/block/sdq/sdq1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:15/end_device-1:0:15/target1:0:15/1:0:15:0/block/sdq/sdq1/partition	1
+l	sys/block/sdr	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/block/sdr
+l	sys/class/block/sdr	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/block/sdr
+b	dev/sdr
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/block/sdr/device	../../../1:0:16:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/wwid	naa.5000cca000000032
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/vpd_pg80	0080001020202020202020205a30303030303531
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/enclosure_device:Slot16	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot16
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot16/slot	16
+l	sys/class/block/sdr1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/block/sdr/sdr1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:16/end_device-1:0:16/target1:0:16/1:0:16:0/block/sdr/sdr1/partition	1
+l	sys/block/sds	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/block/sds
+l	sys/class/block/sds	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/block/sds
+b	dev/sds
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/block/sds/device	../../../1:0:17:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/wwid	naa.5000cca000000033
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/vpd_pg80	0080001020202020202020205a30303030303532
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/enclosure_device:Slot17	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot17
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot17/slot	17
+l	sys/class/block/sds1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/block/sds/sds1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:17/end_device-1:0:17/target1:0:17/1:0:17:0/block/sds/sds1/partition	1
+l	sys/block/sdt	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/block/sdt
+l	sys/class/block/sdt	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/block/sdt
+b	dev/sdt
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/block/sdt/device	../../../1:0:18:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/wwid	naa.5000cca000000034
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/vpd_pg80	0080001020202020202020205a30303030303533
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/enclosure_device:Slot18	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot18
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot18/slot	18
+l	sys/class/block/sdt1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/block/sdt/sdt1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:18/end_device-1:0:18/target1:0:18/1:0:18:0/block/sdt/sdt1/partition	1
+l	sys/block/sdu	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/block/sdu
+l	sys/class/block/sdu	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/block/sdu
+b	dev/sdu
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/block/sdu/device	../../../1:0:19:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/wwid	naa.5000cca000000035
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/vpd_pg80	0080001020202020202020205a30303030303534
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/enclosure_device:Slot19	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot19
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot19/slot	19
+l	sys/class/block/sdu1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/block/sdu/sdu1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:19/end_device-1:0:19/target1:0:19/1:0:19:0/block/sdu/sdu1/partition	1
+l	sys/block/sdv	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/block/sdv
+l	sys/class/block/sdv	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/block/sdv
+b	dev/sdv
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/block/sdv/device	../../../1:0:20:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/wwid	naa.5000cca000000036
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/vpd_pg80	0080001020202020202020205a30303030303535
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/enclosure_device:Slot20	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot20
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot20/slot	20
+l	sys/class/block/sdv1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/block/sdv/sdv1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:20/end_device-1:0:20/target1:0:20/1:0:20:0/block/sdv/sdv1/partition	1
+l	sys/block/sdw	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/block/sdw
+l	sys/class/block/sdw	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/block/sdw
+b	dev/sdw
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/block/sdw/device	../../../1:0:21:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/wwid	naa.5000cca000000037
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/vpd_pg80	0080001020202020202020205a30303030303536
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/enclosure_device:Slot21	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot21
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot21/slot	21
+l	sys/class/block/sdw1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/block/sdw/sdw1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:21/end_device-1:0:21/target1:0:21/1:0:21:0/block/sdw/sdw1/partition	1
+l	sys/block/sdx	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/block/sdx
+l	sys/class/block/sdx	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/block/sdx
+b	dev/sdx
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/block/sdx/device	../../../1:0:22:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/wwid	naa.5000cca000000038
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/vpd_pg80	0080001020202020202020205a30303030303537
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/enclosure_device:Slot22	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot22
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot22/slot	22
+l	sys/class/block/sdx1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/block/sdx/sdx1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:22/end_device-1:0:22/target1:0:22/1:0:22:0/block/sdx/sdx1/partition	1
+l	sys/block/sdy	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/block/sdy
+l	sys/class/block/sdy	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/block/sdy
+b	dev/sdy
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/block/sdy/device	../../../1:0:23:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/rev	C54K
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/wwid	naa.5000cca000000039
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/vpd_pg80	0080001020202020202020205a30303030303538
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/enclosure_device:Slot23	../../../../port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot23
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:24/end_device-1:0:24/target1:0:24/1:0:24:0/enclosure/1:0:24:0/Slot23/slot	23
+l	sys/class/block/sdy1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/block/sdy/sdy1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:23/end_device-1:0:23/target1:0:23/1:0:23:0/block/sdy/sdy1/partition	1
+l	sys/block/sdz	../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/block/sdz
+l	sys/class/block/sdz	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/block/sdz
+b	dev/sdz
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/block/sdz/device	../../../1:0:25:0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/vendor	WDC     
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/model	WUH722020BL5204 
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/rev	C5C0
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/wwid	naa.5000cca00000003a
+x	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/vpd_pg80	0080001020202020202020205a30303030303539
+l	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/enclosure_device:Slot00	../../../../port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot00
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:10/end_device-1:1:10/target1:0:35/1:0:35:0/enclosure/1:0:35:0/Slot00/slot	0
+l	sys/class/block/sdz1	../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/block/sdz/sdz1
+f	sys/devices/pci0000:00/0000:00:1c.0/0000:01:00.0/host1/port-1:0/expander-1:0/port-1:0:25/expander-1:1/port-1:1:0/end_device-1:1:0/target1:0:25/1:0:25:0/block/sdz/sdz1/partition	1
+l	sys/block/nvme0n1	../devices/pci0000:00/0000:00:1c.1/0000:02:00.0/nvme/nvme0/nvme0n1
+l	sys/class/block/nvme0n1	../../devices/pci0000:00/0000:00:1c.1/0000:02:00.0/nvme/nvme0/nvme0n1
+b	dev/nvme0n1
+l	sys/devices/pci0000:00/0000:00:1c.1/0000:02:00.0/nvme/nvme0/nvme0n1/device	../../nvme0
+f	sys/devices/pci0000:00/0000:00:1c.1/0000:02:00.0/nvme/nvme0/model	SAMSUNG MZQL27T6HBLA-00A07              
+f	sys/devices/pci0000:00/0000:00:1c.1/0000:02:00.0/nvme/nvme0/serial	Z0000000000060      
+l	sys/class/block/nvme0n1p1	../../devices/pci0000:00/0000:00:1c.1/0000:02:00.0/nvme/nvme0/nvme0n1/nvme0n1p1
+f	sys/devices/pci0000:00/0000:00:1c.1/0000:02:00.0/nvme/nvme0/nvme0n1/nvme0n1p1/partition	1
+l	sys/block/nvme1n1	../devices/pci0000:00/0000:00:1c.2/0000:03:00.0/nvme/nvme1/nvme1n1
+l	sys/class/block/nvme1n1	../../devices/pci0000:00/0000:00:1c.2/0000:03:00.0/nvme/nvme1/nvme1n1
+b	dev/nvme1n1
+l	sys/devices/pci0000:00/0000:00:1c.2/0000:03:00.0/nvme/nvme1/nvme1n1/device	../../nvme1
+f	sys/devices/pci0000:00/0000:00:1c.2/0000:03:00.0/nvme/nvme1/model	SAMSUNG MZQL27T6HBLA-00A07              
+f	sys/devices/pci0000:00/0000:00:1c.2/0000:03:00.0/nvme/nvme1/serial	Z0000000000061      
+l	sys/class/block/nvme1n1p1	../../devices/pci0000:00/0000:00:1c.2/0000:03:00.0/nvme/nvme1/nvme1n1/nvme1n1p1
+f	sys/devices/pci0000:00/0000:00:1c.2/0000:03:00.0/nvme/nvme1/nvme1n1/nvme1n1p1/partition	1
