@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 (2026-10-20)
+
+- **Updated the library it colours its log with, and the tools it is released with.** Nothing it reports has changed.
+
 ## 0.1.1 (2026-10-20)
 
 - **A virtual disk with no serial number now has one**: the name the virtual machine gives it, such as `drive-scsi0`, as `lsblk` shows it. Before, its serial was empty, so it could not be matched with what other exporters say of it.
