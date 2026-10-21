@@ -31,7 +31,7 @@ func TestADiskIsFoundFromItsPath(t *testing.T) {
 	}{
 		{"a SAS disk in a slot", poolDisk, poll.Disk{Name: "sdaa", Partition: "sdaa1", Serial: "Z0000001", Model: "WUH722020BL5204", WWN: "5000cca000000001", Enclosure: "1:0:35:0", Slot: "1"}},
 		{"a cache disk named without a link", "/dev/nvme0n1p1", poll.Disk{Name: "nvme0n1", Partition: "nvme0n1p1", Serial: "Z0000000000060", Model: "SAMSUNG MZQL27T6HBLA-00A07"}},
-		{"a virtual disk with nothing to say of itself", "/dev/sda3", poll.Disk{Name: "sda", Partition: "sda3", Model: "QEMU HARDDISK"}},
+		{"a virtual disk known by its maker's name for it", "/dev/sda3", poll.Disk{Name: "sda", Partition: "sda3", Serial: "Z0000000062", Model: "QEMU HARDDISK"}},
 	} {
 		t.Run(tc.name, func(t *testing.T) {
 			t.Parallel()
@@ -157,6 +157,44 @@ f	sys/devices/e/enclosure/2:0:9:0/Disk 7/slot	-1
 	}
 	if got.Enclosure != "2:0:9:0" || got.Slot != "Disk 7" {
 		t.Errorf("got %+v, want slot Disk 7 of 2:0:9:0", got)
+	}
+}
+
+// A virtual disk with no page of its serial number is known by the name its maker gives it in its page of names, and by no other name there.
+func TestAVirtualDiskKnownByItsMakersName(t *testing.T) {
+	t.Parallel()
+
+	const drive = "64726976652d7363736930" // drive-scsi0, eleven bytes
+
+	for _, tc := range []struct {
+		name, pages, want string
+	}{
+		{"as QEMU gives it", "x\tsys/devices/d/vpd_pg83\t0083000f0200000b" + drive, "drive-scsi0"},
+		{"after a world wide name", "x\tsys/devices/d/vpd_pg83\t0083001b010300085000c500123456780200000b" + drive, "drive-scsi0"},
+		{"for a port and not the disk", "x\tsys/devices/d/vpd_pg83\t0083000f0210000b" + drive, ""},
+		{"not written as text", "x\tsys/devices/d/vpd_pg83\t008300080100000412345678", ""},
+		{"cut off", "x\tsys/devices/d/vpd_pg83\t0083000f0200000b6472697665", ""},
+		{"with a page of its serial number too", "x\tsys/devices/d/vpd_pg80\t008000045a303335\nx\tsys/devices/d/vpd_pg83\t0083000f0200000b" + drive, "Z035"},
+	} {
+		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
+
+			tree := hosttest.Machine(t, `l	dev/disk/by-partuuid/p	../../sdb1
+b	dev/sdb1
+l	sys/class/block/sdb1	../../devices/d/block/sdb/sdb1
+f	sys/devices/d/block/sdb/sdb1/partition	1
+l	sys/devices/d/block/sdb/device	../../../d
+f	sys/devices/d/model	QEMU HARDDISK
+`+tc.pages+"\n")
+
+			got, err := host.New(tree).Disk("/dev/disk/by-partuuid/p")
+			if err != nil {
+				t.Fatal(err)
+			}
+			if got.Serial != tc.want {
+				t.Errorf("got serial %q, want %q", got.Serial, tc.want)
+			}
+		})
 	}
 }
 

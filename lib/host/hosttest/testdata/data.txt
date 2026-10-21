@@ -1,11 +1,11 @@
 # What the machine data says of the disks behind its pools, in the lines .scripts/capture.sh writes: every serial number and world wide name here is
 # made up, and the rest is as it was. It was rebuilt from listings of data's /dev and /sys taken by hand, before capture.sh could be run there, so
 # two things are filled in as the kernel lays them out rather than read: each partition's number, and each slot's number, from the name its
-# enclosure gives it.
+# enclosure gives it. sda's page of names was read later, from the running machine.
 #
-# TrueNAS 25.10 in a virtual machine: the pool boot-pool on a virtual disk (sda) with no serial number, and the pool host on another (sdbh) with
-# one, neither with a world wide name to give; 56 SAS disks in the pool data behind two Broadcom 9500 cards and three enclosures, 2 more as its
-# spares, and 2 NVMe disks as its cache.
+# TrueNAS 25.10 in a virtual machine: the pool boot-pool on a virtual disk (sda) with no page of its serial number, known by the name its maker
+# gives it in its page of names, and the pool host on another (sdbh) with one, neither with a world wide name to give; 56 SAS disks in the pool
+# data behind two Broadcom 9500 cards and three enclosures, 2 more as its spares, and 2 NVMe disks as its cache.
 l	dev/disk/by-partuuid/01eaa141-2527-4f41-a278-f604fe10d196	../../sdat1
 b	dev/sdat1
 l	dev/disk/by-partuuid/02ff7c5b-4289-4369-ac88-a0be2bac1cfb	../../sdt1
@@ -144,6 +144,7 @@ f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/ta
 f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/model	QEMU HARDDISK   
 f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/rev	2.5+
 !	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/wwid	Invalid argument
+x	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/vpd_pg83	0083000f0200000b5a30303030303030303632
 l	sys/class/block/sda1	../../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda1
 f	sys/devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda1/partition	1
 l	sys/class/block/sda2	../../devices/pci0000:00/0000:00:1e.0/0000:05:04.0/0000:09:01.0/virtio2/host0/target0:0:0/0:0:0:0/block/sda/sda2

@@ -50,6 +50,20 @@ function page(hex,    out, i, byte, first, last, real, swapped) {
 	return out substr(hex, last + 2)
 }
 
+# listed is the page of names of a disk, in hex, with each name its maker made up for it as text swapped as a serial number is, each world wide name
+# swapped as one is, and the four bytes before each name as they were.
+function listed(hex,    out, at, one) {
+	out = substr(hex, 1, 8)
+	for (at = 9; at + 7 <= length(hex); at += length(one)) {
+		one = substr(hex, at, 8 + 2 * number(substr(hex, at + 6, 2)))
+		if (number(substr(one, 2, 1)) == 2 && number(substr(one, 3, 2)) % 64 == 0) one = page(one)
+		if (number(substr(one, 4, 1)) == 3) one = substr(one, 1, 8) name(substr(one, 9))
+		out = out one
+	}
+
+	return out substr(hex, at)
+}
+
 # name is the made-up world wide name that stands for a real one.
 function name(real) {
 	if (!(real in names)) names[real] = substr(real, 1, 7) sprintf("%0" (length(real) - 7) "x", ++named)
@@ -65,6 +79,7 @@ function name(real) {
 }
 
 $1 == "x" && file == "vpd_pg80" { $3 = page($3); print; next }
+$1 == "x" && file == "vpd_pg83" { $3 = listed($3); print; next }
 
 $1 == "f" && file == "serial" {
 	real = $3

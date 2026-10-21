@@ -1,17 +1,21 @@
 # Changelog
 
+## 0.1.1 (2026-10-20)
+
+- **A virtual disk with no serial number now has one**: the name the virtual machine gives it, such as `drive-scsi0`, as `lsblk` shows it. Before, its serial was empty, so it could not be matched with what other exporters say of it.
+
 ## 0.1.0 (2026-10-20)
 
-The first release: how long a machine's ZFS pools, vdevs and disks take to answer, as a page Prometheus can read.
+The first release: how long a machine's ZFS pools, vdevs and disks take to answer, and how healthy and full they are, as a page Prometheus can read.
 
-- **How long every request took, as histograms**: for each pool and top-level vdev, all of it and each part, at the disk and in each of ZFS's queues; for each disk, its own time at the disk, so its slowest 1% can be set beside the other disks in its vdev.
-- **Requests slower than ZFS's limit, for each disk**, which neither TrueNAS nor `zpool_influxdb` reports.
-- **Every disk timing, if asked for**: `--disk-timings` gives each disk all its vdev has, every wait, request sizes, reads and writes. It is off by default, since it takes the page to about four times the readings.
-- **Health, errors and space**: the state of every pool, vdev and disk, the read, write and checksum errors counted of each, each pool's damaged data, how big each pool and vdev is and how much is used, and how broken up each vdev's free space is.
-- **Each pool's last scrub or resilver**: whether it is running or paused, when it started and ended, how far along it is, how fast it goes and how long it has left, as `zpool status` works them out, and what it repaired and found.
-- **How big each request was, how many reads and writes each pool and vdev has done, and how many requests each pool has queued.**
-- **Every disk by its serial number**, with the labels truenas-exporter gives it and the enclosure and slot sas-exporter names, worked out every round so a swapped or renamed disk is right at once. A disk ZFS cannot find is labelled by its GUID.
-- **Bucket bounds as ZFS counts them**: `zpool_influxdb` labels each latency bucket with its bottom, which reads every request as twice as fast as it was; each is labelled here with its top.
-- **The machine's own ZFS programs**, run through its own loader when the program is in a container, so they always match the machine's ZFS.
-- **Never stuck behind ZFS**: each command is run on its own schedule, one at a time, with a time limit. One that will not end even when killed holds back the rest until it does, and `zfs_up` and `zfs_command_stuck` say so. A scrape is answered from memory.
-- **Leave out any part**, and it is not asked for either: `--skip` and `--metrics` take the levels `pools`, `vdevs` and `disks`, and the kinds `poll`, `latency`, `request-sizes`, `queues`, `operations`, `slow-ios`, `space`, `health`, `scrub` and `resilver`.
+- **How long every request took**: for each pool and vdev, split into time at the disk and time waiting in ZFS's queues; for each disk, its own time at the disk, to pick out the slow one in a vdev.
+- **Slow requests for each disk**, which neither TrueNAS nor `zpool_influxdb` reports.
+- **Every timing for each disk too, if asked for** with `--disk-timings`. It is off by default, since it makes the page about four times bigger.
+- **Health and space**: the state and error counts of every pool, vdev and disk, damaged files, size and space used, and how broken up each vdev's free space is.
+- **Scrubs and resilvers**: whether one is running, how far along it is, how long it has left, and what it found and repaired.
+- **Request sizes and read and write counts** for each pool and vdev, and the requests each pool has waiting.
+- **Every disk by its serial number**, with the labels truenas-exporter uses and the enclosure and slot sas-exporter uses, so all three join. It is checked every round, so a swapped disk is right at once.
+- **Timing buckets labelled by their top**: `zpool_influxdb` labels each by its bottom, which makes every request look twice as fast as it was.
+- **The machine's own ZFS programs**, even from a container, so they always match its ZFS.
+- **Never stuck behind ZFS**: each command runs alone with a time limit, and the page is served from the last good answer. `zfs_up` and `zfs_command_stuck` say when ZFS is not answering.
+- **Leave out any part**: `--skip` and `--metrics` pick which levels and kinds of reading to collect, and anything left out is not asked of ZFS at all.

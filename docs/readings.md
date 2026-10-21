@@ -115,6 +115,7 @@ Labels: `pool`, `class`, `vdev`, `disk`, `serial`. One for every disk in every p
 
 - `vdev` is the top-level vdev the disk is in.
 - `disk` is the kernel's name for the disk today, `sdf`. It can change at a restart. `serial` does not, so join on that.
+- A virtual disk with no serial number of its own has the name its maker gives it as `serial`, `drive-scsi0` from Proxmox, as `lsblk` names it.
 - A disk ZFS cannot find has its `guid` as `disk` and no `serial`, as truenas-exporter labels it.
 - Which disk is behind each path ZFS has is worked out every round, so a disk that was swapped or renamed is right at once.
 - `enclosure` and `slot` are as sas-exporter names them: the kernel's name for the enclosure, `1:0:24:0`, and the slot's number. Both are empty for a disk in no enclosure.

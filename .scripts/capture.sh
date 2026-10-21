@@ -32,7 +32,7 @@ file() {
 	[ -e "$1" ] || return 0
 
 	case "${1##*/}" in
-	vpd_pg80)
+	vpd_pg80 | vpd_pg83)
 		if value=$(od -An -v -tx1 "$1" 2>&1); then
 			printf 'x\t%s\t%s\n' "$(rel "$1")" "$(printf '%s' "$value" | tr -d ' \n')"
 		else
@@ -91,6 +91,9 @@ for block in "$root"/sys/block/*; do
 	for name in vendor model rev serial wwid vpd_pg80; do
 		file "$device/$name"
 	done
+
+	# the page of a disk's names holds the world wide names of the disk and its ports, so it is kept only for a disk known by a name in it
+	[ -e "$device/vpd_pg80" ] || [ -e "$device/serial" ] || file "$device/vpd_pg83"
 
 	for seat in "$device"/enclosure_device:*; do
 		[ -L "$seat" ] || continue

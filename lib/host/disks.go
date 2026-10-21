@@ -43,10 +43,14 @@ func (h Host) Disk(devPath string) (poll.Disk, error) {
 		return poll.Disk{}, err
 	}
 
-	// a SCSI or SATA disk keeps its serial number in a page of its own description, and an NVMe one beside its model
+	// a SCSI or SATA disk keeps its serial number in a page of its own description, and an NVMe one beside its model. A virtual disk with neither goes
+	// by the name its maker gives it in the page of its names, drive-scsi0, which is what udev, and so lsblk, calls its serial number
 	d.Serial = serial(read(filepath.Join(device, "vpd_pg80")))
 	if d.Serial == "" {
 		d.Serial = text(filepath.Join(device, "serial"))
+	}
+	if d.Serial == "" {
+		d.Serial = makersName(read(filepath.Join(device, "vpd_pg83")))
 	}
 	d.Model = text(filepath.Join(device, "model"))
 
@@ -137,4 +141,42 @@ func serial(page []byte) string {
 	}
 
 	return clean(string(body))
+}
+
+// The page of a disk's own description that lists the names it goes by, after the same four bytes: each name is four bytes saying what kind of name
+// it is and how long, and then the name.
+const (
+	namesPage  = 0x83
+	nameHeader = 4
+	nameText   = 0x2 // the low half of a name's first byte when the name is text
+	nameMakers = 0x0 // the low six bits of its second when the name is one the maker made up for the disk itself, not for a port or a group of them
+)
+
+// makersName is the first name in that page the maker made up for the disk itself, written as text, and nothing when there is none. A virtual disk
+// with no page of its serial number is known by it.
+func makersName(page []byte) string {
+	if len(page) < serialPageHeader || page[1] != namesPage {
+		return ""
+	}
+
+	names := page[serialPageHeader:]
+	if length := int(page[2])<<8 | int(page[3]); length < len(names) {
+		names = names[:length]
+	}
+
+	for len(names) >= nameHeader {
+		end := nameHeader + int(names[3])
+		if end > len(names) {
+			return ""
+		}
+
+		if names[0]&0x0f == nameText && names[1]&0x3f == nameMakers {
+			if name := clean(string(names[nameHeader:end])); name != "" {
+				return name
+			}
+		}
+		names = names[end:]
+	}
+
+	return ""
 }

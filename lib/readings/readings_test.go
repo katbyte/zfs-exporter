@@ -473,8 +473,8 @@ func TestTheRealMachine(t *testing.T) {
 		t.Errorf("%d disks are on the page, want data's 56, its 2 cache disks and 2 spares, and the disk of each other pool", n)
 	}
 	for _, line := range lines(got) {
-		if strings.HasPrefix(line, `zfs_disk_`) && strings.Contains(line, `pool="data"`) && strings.Contains(line, `serial=""`) {
-			t.Errorf("a disk of data has no serial number: %s", line)
+		if strings.HasPrefix(line, `zfs_disk_`) && strings.Contains(line, `serial=""`) {
+			t.Errorf("a disk has no serial number: %s", line)
 		}
 	}
 
@@ -491,7 +491,7 @@ func TestTheRealMachine(t *testing.T) {
 		`zfs_disk_latency_seconds_count{class="data",disk="sdf",op="read",pool="data",serial="`,
 		`zfs_vdev_operations_total{class="data",op="read",pool="data",vdev="raidz2-1"}`,
 		`zfs_vdev_operations_total{class="data",op="read",pool="boot-pool",vdev="sda3"}`,
-		`zfs_disk_latency_seconds_count{class="data",disk="sda",op="read",pool="boot-pool",serial="",vdev="sda3",wait="disk"}`,
+		`zfs_disk_latency_seconds_count{class="data",disk="sda",op="read",pool="boot-pool",serial="Z0000000062",vdev="sda3",wait="disk"}`,
 		`zfs_disk_info{class="cache",disk="nvme1n1",`,
 		`zfs_disk_slow_ios_total{class="data",disk="sdf",pool="data",serial="`,
 		`zfs_pool_active_requests{op="read",pool="data",queue="sync"} 0`,
